@@ -1,0 +1,14 @@
+```json
+{
+  "manifest_version": 3,
+  "name": "PO Chart Helper",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://pocketoption.com/*"],
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    { "matches": ["https://pocketoption.com/*"], "js": ["content.js"] }
+  ],
+  "background": { "service_worker": "background.js" }
+}
+```
